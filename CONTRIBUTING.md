@@ -1,4 +1,4 @@
-# Contributing to the `project-name` project
+# Contributing to the `boa` project
 
 ## Filing a bug report
 
@@ -21,14 +21,14 @@ You may NOT suggest features through email to the core developers.
 
 ## Setting up your development environment
 
-Since `project-name` has very little to do beyond programming and testing,
+Since `boa` has very little to do beyond programming and testing,
 the following should be enough for 95% of all contributors:
 
 1. A working Git or GitHub Desktop installation
 2. A text editor / Python IDE
-3. An installation of Python that supports Python version 3.10 or higher
+3. An installation of Python that supports Python version 3.11 or higher
 4. The following, non-standard PyPI modules (available through `pip`):
     - `poetry`
 
-[Issues]: https://github.com/Diapolo10/project-name/issues
-[Projects]: https://github.com/Diapolo10/project-name/projects
+[Issues]: https://github.com/owodunni/boa/issues
+[Projects]: https://github.com/owodunni/boa/projects

@@ -1,4 +1,4 @@
-# project-name
+# BOA - Bokföringsprogram för organisationer och aktiebolag
 
 Remember to:
 

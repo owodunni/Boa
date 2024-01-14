@@ -1,6 +1,6 @@
 """Stub unit test file."""
 
-from project_name.lib import adder
+from boa.lib import adder
 
 
 def test_stub() -> None:
