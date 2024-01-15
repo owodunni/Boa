@@ -1,3 +1,3 @@
 # Bokföring
 
-::: boa.bokföring
+::: boa.bokforing

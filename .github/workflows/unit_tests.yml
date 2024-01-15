@@ -47,6 +47,10 @@ jobs:
         poetry run pip install --upgrade pip setuptools
         poetry install --with tests
 
+    - name: Run mkdocs
+      run: |
+        poetry run mkdocs build
+
     - name: Run Tox (Pytest + Coverage)
       run: |
         poetry run tox

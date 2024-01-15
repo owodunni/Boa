@@ -153,10 +153,9 @@ select = [
     "YTT",  # sys.version
 ]
 ignore = [
-    "D203",    # One blank line before class docstring
-    "D212",    # Multi-line summary first line
-    "PLR0913", # Too many arguments
-    "Q000",    # Single quotes found but double quotes preferred
+    "D400",
+    "D415",
+    "FA102",
 ]
 ignore-init-module-imports = true
 line-length = 120

@@ -7,8 +7,8 @@ from typing import TypeAlias
 
 """# Konto
 
-Ett konto är en samling av finansiell information som används för att klassificera
-och spåra finansiella transaktioner.
+Ett konto är en samling av finansiell information
+som används för att klassificera och spåra finansiella transaktioner.
 """
 Konto: TypeAlias = int
 Summa: TypeAlias = float
@@ -23,11 +23,12 @@ class Verifikationer:
     där debiteringar och krediteringar balanseras. För varje affärshändelse ska det finnas en verifikation.
 
     Args:
+    ----
         id (int): Unikt identifieringsnummer för verifikationen.
         verifikationsnummer (int): Verifikationsnummer eller annat identifikationstecken för att sammankoppla verifikationen med den bokförda händelsen.
         datum (str): Datum när verifikationen upprättades.
         beskrivning (str): Beskrivning av affärshändelsen.
-        skapadAv (str): Namnet på den som skapade verifikationen.
+        skapad_av (str): Namnet på den som skapade verifikationen.
         affärshändelse_datum (str): Datum när affärshändelsen inträffade.
         debiteringar (list[Kontohändelse]): En lista av kontohändelser som representerar debiteringar på verifikationen.
         krediteringar (list[Kontohändelse]): En lista av kontohändelser som representerar krediteringar på verifikationen.
@@ -48,13 +49,13 @@ class Verifikationer:
     ## Arkivering
 
     - Verifikationer bör behållas under en specifik period, enligt svensk lag, för att underlätta revisioner och inspektioner.
-
     """
+
     id: int
     verifikationsnummer: int
     datum: str
     beskrivning: str
-    skapadAv: str
+    skapad_av: str
     affärshändelse_datum: str
     debiteringar: list[Kontohändelse]
     krediteringar: list[Kontohändelse]
