@@ -1,0 +1,12 @@
+site_name: Boa 
+
+nav:
+  - Hem: ./index.md
+  - Bokföring: ./bokföring.md   
+
+plugins:
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        paths: [src/boa]

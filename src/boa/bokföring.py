@@ -1,6 +1,15 @@
+"""# Bokföring
+
+Dataklasser för att representera bokföringsinformation.
+"""
 from dataclasses import dataclass
 from typing import TypeAlias
 
+"""# Konto
+
+Ett konto är en samling av finansiell information som används för att klassificera
+och spåra finansiella transaktioner.
+"""
 Konto: TypeAlias = int
 Summa: TypeAlias = float
 Kontohändelse: TypeAlias = tuple[Konto, Summa]
