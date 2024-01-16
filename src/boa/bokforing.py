@@ -2,48 +2,48 @@
 
 Dataklasser för att representera bokföringsinformation.
 """
-from dataclasses import dataclass
-from typing import TypeAlias
-from enum import Enum
+from dataclasses import dataclass, field
 
-class Kontotyp(Enum):
-    """# Kontotyp
-
-    En klassificering av kontot. 
-    """
-    Debet = "Debet"
-    """## Debet
-
-    En debet är en ökning av tillgångar eller minskning av skulder.
-    """
-    Kredit = "Kredit"
-    """## Kredit
-
-    En kredit är en ökning av skulder eller minskning av tillgångar.
-    """
-
-
-Summa: TypeAlias = float
+import marshmallow.validate
 
 
 @dataclass
-class Konto:
-    """# Konto
+class KonteringsPost:
+    """# KonteringsPost
 
-    Ett konto är en samling av finansiell information
-    som används för att klassificera och spåra finansiella transaktioner.
+    En konteringspost är en postering på ett konto. Den kan vara en debitering
+    eller en kreditering.
 
     Args:
     ----
-        kontonummer (int): Kontonummer eller annat identifikationstecken för att sammankoppla kontot med den bokförda händelsen.
-        beskrivning (str): En kort beskrivning av kontot.
-        kontotyp (str): Om det är ett debet- eller kreditkonto.
+        belopp (float): Beloppet konteringsposten innehåller.
+        kontonummer (int): Kontonumret som konteringsposten ska bokföras på.
     """
-    kontonummer: int
-    beskrivning: str
-    kontotyp: Kontotyp
 
-Kontohändelse: TypeAlias = tuple[Konto, Summa]
+    belopp: float = field(
+        metadata={"validate": marshmallow.validate.Range(min=0)})
+    kontonummer: int = field(
+        metadata={"validate": marshmallow.validate.Range(min=0)})
+
+
+@dataclass
+class Kontering:
+    """# Kontering
+
+    Att fördela affärshändelser på olika konton kallas för kontering.
+    En kontering har två sidor, en debet och en kredit. Debet är vänstersidan
+    och kredit är högersidan.
+
+    Summan av debet och kredit måste vara lika.
+
+    Args:
+    ----
+        debet (list[KonteringsPost]): En lista av konteringsposter som ska debiteras.
+        kredit (list[KonteringsPost]): En lista av konteringsposter som ska krediteras.
+    """
+
+    debet: list[KonteringsPost] = field(default_factory=list)
+    kredit: list[KonteringsPost] = field(default_factory=list)
 
 
 @dataclass
@@ -86,5 +86,4 @@ class Verifikationer:
     beskrivning: str
     skapad_av: str
     affärshändelse_datum: str
-    debiteringar: list[Kontohändelse]
-    krediteringar: list[Kontohändelse]
+    kontering: Kontering

@@ -2,7 +2,8 @@ site_name: Boa
 
 nav:
   - Hem: ./index.md
-  - Bokföring: ./bokföring.md   
+  - Bokföring: ./bokföring.md
+  - Grundbok: ./grundbok.md
 
 plugins:
 - mkdocstrings:
