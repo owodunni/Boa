@@ -47,8 +47,8 @@ class Kontering:
 
 
 @dataclass
-class Verifikationer:
-    """# Verifikationer
+class Verifikation:
+    """# Verifikation
 
     En verifikation fungerar som ett bevis för en finansiell transaktion. Den följer principerna för dubbel bokföring
     där debiteringar och krediteringar balanseras. För varje affärshändelse ska det finnas en verifikation.

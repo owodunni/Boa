@@ -15,9 +15,24 @@ skapa [consistency proofs](https://transparency.dev/verifiable-data-structures/)
 som kan användas för att granska bokföringen i efterhand.
 """
 
+from dataclasses import dataclass, field
+
+from boa.bokforing import Verifikation
+
+
+@dataclass
+class VerifikationWithHash(Verifikation):
+    """# VerifikationWithHash
+
+    En verifikation med en hash som används för att verifiera att verifikationen inte har ändrats.
+    """
+
+    hash: str = field(default_factory=str)
 
 class Grundbok:
     """# Grundbok
 
     hello
     """
+
+    verifikationer: list[VerifikationWithHash] = field(default_factory=list)

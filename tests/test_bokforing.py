@@ -1,15 +1,15 @@
 """Stub unit test file."""
 
-from boa.bokforing import Verifikationer
-
 import marshmallow_dataclass
 
+from boa.bokforing import Verifikation
 
-def test_adder():
-    """Test the adder function."""
-    verifikationer_schema = marshmallow_dataclass.class_schema(
-        Verifikationer)()
-    verifikationer1 = verifikationer_schema.load(
+
+def test_verifikation():
+    """Test deserialize verifikation."""
+    verifikation_schema = marshmallow_dataclass.class_schema(
+        Verifikation)()
+    verifikation1 = verifikation_schema.load(
         {"beskrivning": "test",
          "verifikationsnummer": 24,
          "datum": "hej",
@@ -18,7 +18,7 @@ def test_adder():
                        "kredit": [{"belopp": 100, "kontonummer": 1930}]},
          "affärshändelse_datum": "hej"})
 
-    verifikationer2 = verifikationer_schema.load(
+    verifikation2 = verifikation_schema.load(
         {"beskrivning": "test",
          "datum": "hej",
          "verifikationsnummer": 24,
@@ -28,5 +28,5 @@ def test_adder():
              "debet": [{"belopp": 100, "kontonummer": 1930}],
          },
          "affärshändelse_datum": "hej"})
-    assert verifikationer_schema.dump(
-        verifikationer1) == verifikationer_schema.dump(verifikationer2)
+    assert verifikation_schema.dump(
+        verifikation1) == verifikation_schema.dump(verifikation2)
