@@ -2,7 +2,8 @@
 
 Dataklasser för att representera bokföringsinformation.
 """
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
+from typing import Self
 
 import marshmallow.validate
 
@@ -81,9 +82,13 @@ class Verifikation:
     - Verifikationer bör behållas under en specifik period, enligt svensk lag, för att underlätta revisioner och inspektioner.
     """
 
-    verifikationsnummer: int
+    verifikationsnummer: str
     datum: str
     beskrivning: str
     skapad_av: str
     affärshändelse_datum: str
     kontering: Kontering
+
+    def dict(self: Self) -> dict:
+        """Returnera verifikationen som en dictionary."""
+        return {k: str(v) for k, v in asdict(self).items()}

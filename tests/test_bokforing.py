@@ -11,7 +11,7 @@ def test_verifikation():
         Verifikation)()
     verifikation1 = verifikation_schema.load(
         {"beskrivning": "test",
-         "verifikationsnummer": 24,
+         "verifikationsnummer": "v24",
          "datum": "hej",
          "skapad_av": "Alex",
          "kontering": {"debet": [{"belopp": 100, "kontonummer": 1930}],
@@ -21,7 +21,7 @@ def test_verifikation():
     verifikation2 = verifikation_schema.load(
         {"beskrivning": "test",
          "datum": "hej",
-         "verifikationsnummer": 24,
+         "verifikationsnummer": "v24",
          "skapad_av": "Alex",
          "kontering": {
              "kredit": [{"belopp": 100, "kontonummer": 1930}],
