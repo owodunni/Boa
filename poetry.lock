@@ -386,13 +386,13 @@ mkdocs = ">=1.1"
 
 [[package]]
 name = "mkdocstrings"
-version = "0.24.0"
+version = "0.24.1"
 description = "Automatic documentation from sources, for MkDocs."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "mkdocstrings-0.24.0-py3-none-any.whl", hash = "sha256:f4908560c10f587326d8f5165d1908817b2e280bbf707607f601c996366a2264"},
-    {file = "mkdocstrings-0.24.0.tar.gz", hash = "sha256:222b1165be41257b494a9d29b14135d2b7ca43f38161d5b10caae03b87bd4f7e"},
+    {file = "mkdocstrings-0.24.1-py3-none-any.whl", hash = "sha256:b4206f9a2ca8a648e222d5a0ca1d36ba7dee53c88732818de183b536f9042b5d"},
+    {file = "mkdocstrings-0.24.1.tar.gz", hash = "sha256:cc83f9a1c8724fc1be3c2fa071dd73d91ce902ef6a79710249ec8d0ee1064401"},
 ]
 
 [package.dependencies]
@@ -879,4 +879,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.6"
-content-hash = "bb9e52818dbeffcead87c14a10bb1ed1f0687da7264aafe9d60e7f3df5a841e8"
+content-hash = "2487cae80a5daf75ba859e7d3ef631cd25b92af08c421a5d2091f0ecc09f477a"
