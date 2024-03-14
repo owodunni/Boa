@@ -51,7 +51,7 @@ classifiers = [
 python = "^3.11.6"
 mkdocs = "^1.5.3"
 mkdocstrings = "^0.24.1"
-mkdocstrings-python = "^1.8.0"
+mkdocstrings-python = "^1.9.0"
 marshmallow-dataclass = {extras = ["enum", "union"], version = "^8.6.0"}
 
 
