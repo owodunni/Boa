@@ -51,6 +51,7 @@ class Grundbok:
         Args:
         ----
             verifikation (VerifikationWithHash): Verifikationen som ska läggas till i grundboken.
+
         """
         self.verifikationer.append(verifikation)
 
@@ -66,6 +67,7 @@ class GrundbokService:
         Args:
         ----
             grundbok (Grundbok): Grundboken som ska hanteras.
+
         """
         # TODO: Läs in grundboken från filsystemet
         # TODO: Setup merkletree and use it to get the root hash
@@ -77,6 +79,7 @@ class GrundbokService:
         Args:
         ----
             verifikation (Verifikation): Verifikationen som ska läggas till i grundboken.
+
         """
         # TODO: Verify that the verifikation is valid
         d = verifikation.dict()
@@ -95,6 +98,7 @@ class GrundbokService:
         Returns:
         -------
             Verifikation: Verifikationen som hittades.
+
         """
         for verifikation in self.grundbok.verifikationer:
             if verifikation.verifikationsnummer == verifikationsnummer:
