@@ -19,6 +19,7 @@ class KonteringsPost:
     ----
         belopp (float): Beloppet konteringsposten innehåller.
         kontonummer (int): Kontonumret som konteringsposten ska bokföras på.
+
     """
 
     belopp: float = field(
@@ -41,6 +42,7 @@ class Kontering:
     ----
         debet (list[KonteringsPost]): En lista av konteringsposter som ska debiteras.
         kredit (list[KonteringsPost]): En lista av konteringsposter som ska krediteras.
+
     """
 
     debet: list[KonteringsPost] = field(default_factory=list)
@@ -80,6 +82,7 @@ class Verifikation:
     ## Arkivering
 
     - Verifikationer bör behållas under en specifik period, enligt svensk lag, för att underlätta revisioner och inspektioner.
+
     """
 
     verifikationsnummer: str
