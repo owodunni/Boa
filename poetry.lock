@@ -303,30 +303,25 @@ tests = ["pytest", "pytz", "simplejson"]
 
 [[package]]
 name = "marshmallow-dataclass"
-version = "8.6.1"
+version = "8.7.0"
 description = "Python library to convert dataclasses into marshmallow schemas."
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.8"
 files = [
-    {file = "marshmallow_dataclass-8.6.1-py3-none-any.whl", hash = "sha256:d941137bcb480729a14810e5f10d9bb79a498fb5b57c875aad6be37e97b98a5f"},
-    {file = "marshmallow_dataclass-8.6.1.tar.gz", hash = "sha256:dca312c841f73f8f665b4434d23b3204e8cfbf50b8cbb57bb76f41a6ee8184c8"},
+    {file = "marshmallow_dataclass-8.7.0-py3-none-any.whl", hash = "sha256:9e528d72b83f2b6b0f60cb29fd38781a6f7ce2155295adb1ed33289826a93c4b"},
+    {file = "marshmallow_dataclass-8.7.0.tar.gz", hash = "sha256:0218008fec3fd4b5f739b2a0c6d7593bcc403308f6da953e341e4e359e268849"},
 ]
 
 [package.dependencies]
-marshmallow = [
-    {version = ">=3.13.0,<4.0"},
-    {version = ">=3.18.0,<4.0", optional = true, markers = "python_version >= \"3.7\" and extra == \"enum\""},
-]
-typeguard = {version = ">=2.4.1,<4.0.0", optional = true, markers = "extra == \"union\""}
-typing-inspect = ">=0.8.0,<1.0"
+marshmallow = ">=3.18.0"
+typeguard = ">=4.0.0,<4.1.0"
+typing-inspect = ">=0.9.0,<0.10.0"
 
 [package.extras]
-dev = ["marshmallow (>=3.18.0,<4.0)", "marshmallow-enum", "pre-commit (>=2.17,<3.0)", "pytest (>=5.4)", "pytest-mypy-plugins (>=1.2.0)", "sphinx", "typeguard (>=2.4.1,<4.0.0)"]
+dev = ["pre-commit (>=2.17,<3.0)", "pytest (>=5.4)", "pytest-mypy-plugins (>=1.2.0)", "sphinx"]
 docs = ["sphinx"]
-enum = ["marshmallow (>=3.18.0,<4.0)", "marshmallow-enum"]
 lint = ["pre-commit (>=2.17,<3.0)"]
 tests = ["pytest (>=5.4)", "pytest-mypy-plugins (>=1.2.0)"]
-union = ["typeguard (>=2.4.1,<4.0.0)"]
 
 [[package]]
 name = "mergedeep"
@@ -794,18 +789,21 @@ testing = ["black", "devpi-process", "flake8 (>=6,<7)", "mypy", "pytest (>=7,<8)
 
 [[package]]
 name = "typeguard"
-version = "3.0.2"
+version = "4.0.1"
 description = "Run-time type checker for Python"
 optional = false
 python-versions = ">=3.7.4"
 files = [
-    {file = "typeguard-3.0.2-py3-none-any.whl", hash = "sha256:bbe993854385284ab42fd5bd3bee6f6556577ce8b50696d6cb956d704f286c8e"},
-    {file = "typeguard-3.0.2.tar.gz", hash = "sha256:fee5297fdb28f8e9efcb8142b5ee219e02375509cd77ea9d270b5af826358d5a"},
+    {file = "typeguard-4.0.1-py3-none-any.whl", hash = "sha256:43f55cc9953f26dae362adb973b6c9ad6b97bfffcc6757277912eddd5cfa345b"},
+    {file = "typeguard-4.0.1.tar.gz", hash = "sha256:db35142d1f92fc8c1b954e5cc03b57810428f9cd4e4604647bdf5764fc5bbba9"},
 ]
 
+[package.dependencies]
+typing-extensions = {version = ">=4.7.0", markers = "python_version < \"3.12\""}
+
 [package.extras]
-doc = ["packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
-test = ["mypy (>=0.991)", "pytest (>=7)"]
+doc = ["Sphinx (<7)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
+test = ["mypy (>=1.2.0)", "pytest (>=7)"]
 
 [[package]]
 name = "typing-extensions"
@@ -895,4 +893,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.6"
-content-hash = "fafb81fa4f82a634ffa769424e9a028d4281d00b62a0951bfaa586b36be55985"
+content-hash = "fb988d4aeb6cde81109bff4d5491d3a0c5001e6325a4bf906b4f64b43a3eb6b3"
