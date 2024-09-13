@@ -52,7 +52,7 @@ python = "^3.11.6"
 mkdocs = "^1.6.1"
 mkdocstrings = "^0.26.1"
 mkdocstrings-python = "^1.11.1"
-marshmallow-dataclass = {extras = ["enum", "union"], version = "^8.7.0"}
+marshmallow-dataclass = {extras = ["enum", "union"], version = "^8.7.1"}
 
 
 [tool.poetry.group.dev.dependencies]
