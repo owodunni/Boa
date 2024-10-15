@@ -56,7 +56,7 @@ marshmallow-dataclass = {extras = ["enum", "union"], version = "^8.7.1"}
 
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.11.2"
+mypy = "^1.12.0"
 
 
 [tool.poetry.group.linters]
