@@ -50,7 +50,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.11.6"
 mkdocs = "^1.6.1"
-mkdocstrings = "^0.26.2"
+mkdocstrings = "^0.27.0"
 mkdocstrings-python = "^1.12.2"
 marshmallow-dataclass = {extras = ["enum", "union"], version = "^8.7.1"}
 
