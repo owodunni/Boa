@@ -75,7 +75,7 @@ optional = true
 pytest = "^9.2.0"
 pytest-cov = "^7.1.0"
 tox = "^4.67.16"
-tox-gh-actions = "^3.5.0"
+tox-gh-actions = "^3.5.1"
 
 
 [tool.poetry.urls]
